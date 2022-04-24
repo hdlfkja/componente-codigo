@@ -1,0 +1,143 @@
+:root {
+    --paleBlue: hsl(225, 100%, 94%);
+    --brightBlue: hsl(245, 75%, 52%);
+    --Verypaleblue: hsl(225, 100%, 98%);
+    --desaturatedblue: hsl(224, 23%, 55%);
+    --Darkblue: hsl(223, 47%, 23%);
+    --blanco: rgb(255, 255, 255);
+    --colorHover: hsla(245, 75%, 52%, 0.74);
+
+    --fuentePrincipal: 'Red Hat Display', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *::after, *::before {
+    box-sizing: inherit;
+} 
+body {
+    font-family: var(--fuentePrincipal);
+    font-size: 1.5rem;
+    background-color: var(--paleBlue);
+
+}
+
+/* Globales */
+img {
+    width: 100%;
+}
+p {
+    line-height: 2.5rem;
+}
+.contenedor {
+    width: min(90%, 35rem);
+    background-color: var(--blanco);
+    box-shadow: 0px 26px 39px -36px rgba(0,0,0,0.75);
+    border-radius: 2rem;
+    position: relative;
+}
+
+/* Utilidades */
+.centrar-texto {
+    text-align: center;
+}
+.no-decoracion {
+    text-decoration: none;
+}
+
+/* Imagen de Fondo */
+.imagen-fondo {
+    background-image: url(../images/pattern-background-mobile.svg);
+    background-size: cover;
+    width: 100vw;
+    height: 50rem;
+    position: absolute;
+    top: 0;
+}
+@media (min-width: 768px) {
+    .imagen-fondo {
+        background-image: url(../images/pattern-background-desktop.svg);
+    }
+}
+
+/* Centrar Tarjeta */
+.contenedor-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+    background-image: url();
+}
+/* Imagen Principal */
+.imagen-hero {
+    border-radius: 2rem 2rem 0 0;
+}
+
+/* Contenido Principal */
+.contenido-principal {
+    margin: 0 3rem;
+}
+.contenido-principal__titulo {
+    color: var(--Darkblue);
+}
+.contenido-principal__texto {
+    color: var(--desaturatedblue);
+}
+/* Plan */
+.plan {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--Verypaleblue);
+    padding: 2rem;
+    border-radius: 1rem;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+.plan__texto {
+    margin: 0;
+    font-weight: 600;
+}
+.plan__texto--color {
+    color: var(--desaturatedblue);
+    font-weight: normal;
+}
+.plan__enlace {
+    margin: auto 0;
+    font-size: 1.4rem;
+    color: var(--brightBlue);
+}
+.plan__enlace:hover {
+    color: var(--colorHover);
+    text-decoration: none;
+}
+.plan__icono-musica {
+    width: auto;
+}
+
+/* Boton */
+.boton {
+    margin-bottom: 4rem;
+}
+.boton__pagar {
+    display: block; 
+    color: var(--blanco);
+    font-weight: 600;
+    padding: 1.5rem;
+    box-shadow: 10px 0px 70px 0px var(--desaturatedblue);
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    background-color: var(--brightBlue);
+}
+.boton__pagar:hover {
+    background-color: var(--colorHover);
+}
+.boton__cancelar {
+    display: block;
+    color: var(--desaturatedblue);
+    font-weight: 600;
+}
+.boton__cancelar:hover {
+    color: var(--Darkblue);
+}
